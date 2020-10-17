@@ -34,6 +34,7 @@ alertText("You Steal My Sunshine");
 	- Look at how it used during the creation of the alertText function
 	- Then look at the invocation of the alertText function with the argument
 	  that is meant to exhibit the behavior that you wrote for that "text" parameter
+	- if there is no "return" at the end of a function, then that function returns no value
 */
 
 //creating a function called logText that takes 1 argument, text,
