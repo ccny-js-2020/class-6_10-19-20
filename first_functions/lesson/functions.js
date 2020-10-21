@@ -16,6 +16,7 @@
 //creating a function called alertSomething that alerts "CCNY" when it is invoked
 function alertSomething(){
 	alert("CCNY");
+	console.log("Whatever");
 }
 //invoking the alertSomething function
 alertSomething();
@@ -23,10 +24,15 @@ alertSomething();
 //creating a function called alertText that takes 1 argument, "text",
 //and alerts "CCNY " and whatever text is input as an argument when the function is invoked
 function alertText(text){
-	alert("CCNY " + text);
+	if(text != undefined){
+		alert("CCNY " + text);
+	} else {
+		text = "Sorry, please input text";
+		alert(text);
+	}
 }
 //invoking the alertText function with "You Steal My Sunshine" as an argument
-alertText("You Steal My Sunshine");
+alertText("alerting this text");
 
 /*
 	Explaining function arguments
@@ -43,24 +49,29 @@ function logText(text){
 	console.log("text is : " + text);
 }
 //invocation of the logtextFunction with "hello" as an argument
-logText("hello");
+console.log(logText("hello"));
 
 //creating the addNumbers function that takes 2 arguments
 //which will be added together when the function is invoked, and that will also be the value of that function
 function addNumbers(num1, num2){
+	/*
+		700000 blocks of code here
+		the function will return what you put to the right of "return"
+	*/
 	return num1 + num2;
 }
 
 //invocation of the addNumbers() method here
 //you see that addNumbers() equals what it returns
-console.log(addNumbers());
-console.log("The sum number is " + addNumbers());
+console.log(addNumbers(1,2));
+console.log("The sum number is " + addNumbers(3,4));
 
 /*
 	Explaining "return" in a function:
 	- If you want the function to equal a value and use that value in your logic, you end the function with a return statement
 	- "return" will always be at the end of a function, as you expect it to be the end value of the set of logic you put in the function
-	- return will have the function be equal to the values that you have after return, like on line 50 here. That function equals num1 + num2
+	- return will have the function be equal to the values that you have after return, like the add numbers function here. That function equals num1 + num2
+	- if you do not end the function with a return, then the function will have no value
 */
 
 //creating the multiplyNumbers function that takes 2 arguments
@@ -70,3 +81,12 @@ function multiplyNumbers(num1, num2){
 }
 //invocation of the multiplyNumbers function with 2 arguments
 console.log(multiplyNumbers(5,5))
+
+function subtractNumbers(num1, num2, num3){
+	return num1 - num2 + num3;
+}
+
+console.log(subtractNumbers(10,7,1))
+
+//if a function returns a value, you can even store it in a variable
+var myfunction = subtractNumbers(10,7,1);

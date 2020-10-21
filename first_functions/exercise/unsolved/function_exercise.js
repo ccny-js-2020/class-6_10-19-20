@@ -5,9 +5,11 @@
 */
 //insert code here
 //<------------------------------------------------------->
-
-
-
+//var input = prompt("Here is the text you entered")
+function logString(text){
+  console.log(text)
+}
+// logString(input)
 //<------------------------------------------------------->
 
 /*
@@ -16,7 +18,10 @@
 */
 //insert code here
 //<------------------------------------------------------->
-
+function doThis(){
+  console.log("do this")
+}
+doThis();
 
 
 //<------------------------------------------------------->
@@ -27,8 +32,15 @@
 */
 //insert code here
 //<------------------------------------------------------->
-
-
+function concatanateStrings(arg1, arg2){
+  console.log(arg1)
+  console.log(arg2)
+  console.log(arg1 + arg2);
+  var concatanated = arg1 + arg2;
+  return concatanated;
+}
+// concatanateStrings("Bob", "Saget")
+concatanateStrings("Bob", "Saget");
 
 //<------------------------------------------------------->
 
@@ -41,7 +53,19 @@
 */
 //insert code here
 //<------------------------------------------------------->
+function playDoorGame(doorNumber){
+  if(doorNumber == 1){
+    alert("you've won a rookie Honus Wagner card");
+  } else if (doorNumber == 2){
+    alert("you've won a tesla");
+  } else if (doorNumber == 3){
+    alert("you've won a box of sand");
+  } else {
+    alert("Wrong door number entered")
+  }
+}
 
+playDoorGame(3)
 
 
 //<------------------------------------------------------->
